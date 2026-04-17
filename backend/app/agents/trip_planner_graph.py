@@ -1,7 +1,7 @@
 """
 LangGraph 多智能体旅行规划图
 
-图结构：
+
     START
       │
     router_node  ← 意图识别，条件路由
@@ -13,11 +13,7 @@ LangGraph 多智能体旅行规划图
       │
       └─[edit_plan]── edit_node ──► END
 
-核心改进（相比旧的 HelloAgents 版本）：
-1. 景点/天气/酒店三个 Agent 并行执行，速度更快
-2. 使用 MCP 标准协议调用高德地图工具，更可靠
-3. 有真正的状态管理（TripState），不靠字符串拼接
-4. 条件路由节点（router_node）：基于意图动态分发至新建/编辑两条子图分支
+
 """
 
 import json
